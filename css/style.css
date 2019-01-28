@@ -448,7 +448,7 @@ z-index:100 !important;
 	border-radius: 40px;
 	line-height: 40px;
 }
-#rounding:hover{
+#rounding-length:hover,#rounding-wieght:hover,#rounding-tpt:hover,#rounding-area:hover,#rounding-vol:hover{
 	color: #fff;
 	background: -webkit-gradient(linear, left top, right top, from(#e1705599), to(#0984e3));
 	background: -webkit-linear-gradient(left, #e1705599, #0984e3);
@@ -460,7 +460,7 @@ z-index:100 !important;
 	-webkit-animation-name: gradient;
 	        animation-name: gradient;
 }
-#clear:hover{
+#clear-length:hover,#clear-wieght:hover,#clear-tpt:hover,#clear-area:hover,#clear-vol:hover{
 	color: #fff;
 	background: -webkit-gradient(linear, left top, right top, from(#e17f55), to(#ff0f0f));
 	background: -webkit-linear-gradient(left, #e17f55, #ff0f0f);
@@ -472,7 +472,7 @@ z-index:100 !important;
 	-webkit-animation-name: gradient;
 	        animation-name: gradient;
 }
-#copy:hover{
+#copy-length:hover,#copy-wieght:hover,#copy-tpt:hover,#copy-area:hover,#copy-vol:hover{
 	color: #fff;
 	background: -webkit-gradient(linear, left top, right top, from(#e17fff99), to(#ff66e3));
 	background: -webkit-linear-gradient(left, #e17fff99, #ff66e3);
