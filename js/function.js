@@ -1464,6 +1464,98 @@ function copy_length() {
   copyText.select();
   document.execCommand("copy");
 }
+function decimals_weight(){
+	var res = '';
+	res=document.getElementById('weight-result').value;
+	var a = parseInt(res);
+	var s = String(a).length;
+	var x = res.length;
+	var z = (x-s)-2;
+	if (res[z+s] != '.') {
+		y=parseFloat(res).toFixed(z);
+		document.getElementById('weight-result').value=y;
+	}
+}
+
+function clear_weight() {
+	document.getElementById("weight-input-number").value = '';
+	document.getElementById("weight-result").value = '';
+}
+
+function copy_weight() {
+  var copyText = document.getElementById("weight-result");
+  copyText.select();
+  document.execCommand("copy");
+}
+function decimals_tpt(){
+	var res = '';
+	res=document.getElementById('tpt-result').value;
+	var a = parseInt(res);
+	var s = String(a).length;
+	var x = res.length;
+	var z = (x-s)-2;
+	if (res[z+s] != '.') {
+		y=parseFloat(res).toFixed(z);
+		document.getElementById('tpt-result').value=y;
+	}
+}
+
+function clear_tpt() {
+	document.getElementById("tpt-input-number").value = '';
+	document.getElementById("tpt-result").value = '';
+}
+
+function copy_tpt() {
+  var copyText = document.getElementById("tpt-result");
+  copyText.select();
+  document.execCommand("copy");
+}
+function decimals_area(){
+	var res = '';
+	res=document.getElementById('area-result').value;
+	var a = parseInt(res);
+	var s = String(a).length;
+	var x = res.length;
+	var z = (x-s)-2;
+	if (res[z+s] != '.') {
+		y=parseFloat(res).toFixed(z);
+		document.getElementById('area-result').value=y;
+	}
+}
+
+function clear_area() {
+	document.getElementById("area-input-number").value = '';
+	document.getElementById("area-result").value = '';
+}
+
+function copy_area() {
+  var copyText = document.getElementById("area-result");
+  copyText.select();
+  document.execCommand("copy");
+}
+function decimals_vol(){
+	var res = '';
+	res=document.getElementById('vol-result').value;
+	var a = parseInt(res);
+	var s = String(a).length;
+	var x = res.length;
+	var z = (x-s)-2;
+	if (res[z+s] != '.') {
+		y=parseFloat(res).toFixed(z);
+		document.getElementById('vol-result').value=y;
+	}
+}
+
+function clear_vol() {
+	document.getElementById("vol-input-number").value = '';
+	document.getElementById("vol-result").value = '';
+}
+
+function copy_vol() {
+  var copyText = document.getElementById("vol-result");
+  copyText.select();
+  document.execCommand("copy");
+}
 
 
 
