@@ -1,0 +1,153 @@
+
+.container{
+	height: auto;
+	display: block;
+}
+.work-area{
+	display: block;
+	height: auto;
+	float: left;
+}
+.avatar {
+	height: 150px;
+	width: 100%;
+	display: block;
+}
+.avatar .img{
+	width: 150px;
+	height: 100%;
+	margin: 0 auto;
+	border: 7px solid #ffffff;
+	border-radius: 100%;
+	background: url(../images/logoteam.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.grname{
+	font-size: 32pt;
+	font-weight: 600;
+	text-align: center;
+	margin: 50px 0 50px 0;
+}
+.grname p{
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+.content{
+	height: 350px;
+	width: 1000px;
+	margin-top: 30px;
+}
+.content .content-col{
+	padding: 10px;
+	display: block;
+	height: 100%;
+	width: 27%;
+	float: left;
+	margin-left: 3.5%;
+	background-color: #74b9ff;
+	border-radius: 10px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0984e399), to(#e17055));
+	background: -webkit-linear-gradient(top, #0984e399, #e17055);
+	background: -o-linear-gradient(top, #0984e399, #e17055);
+	background: linear-gradient(180deg, #0984e399, #e17055);
+	background-size: 200% 200%;
+	-webkit-animation: 6s ease infinite;
+	animation: 6s ease infinite;
+}
+@-webkit-keyframes gradient {
+    0%{background-position:83% 0%}
+    50%{background-position:18% 100%}
+    100%{background-position:83% 0%}
+}
+@keyframes gradient { 
+    0%{background-position:83% 0%}
+    50%{background-position:18% 100%}
+    100%{background-position:83% 0%}
+}	
+.content-col-title{
+	display: block;
+	font-size: 36pt;
+	margin-top: 10px;
+	font-weight: 900;
+	text-align: center;
+}
+.content-col-content{
+	display: block;
+	width: 100%;
+	height: 300px;
+	font-size: 10pt;
+	font-weight: 300;
+	margin-top: 10px;
+	text-align: center;
+}
+.content-col:hover{
+	-webkit-animation-name: gradient;
+	        animation-name: gradient;
+	-webkit-transform: scale(1.009);
+	    -ms-transform: scale(1.009);
+	        transform: scale(1.009);
+}
+.content-col-content p,ul{
+	padding: 5px;
+	font-size: 12pt;
+}
+.link{
+	position: relative;
+	display: block;
+	width: 1000px;
+	height: 60px;
+	margin-top: 500px;
+}
+.link ul {
+	width: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	margin: 0 auto;
+}
+.link a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 100%;
+	font-size: 24pt;
+	background-color: #fff;
+	border-radius: 100%;
+	line-height: 50px;
+	-webkit-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+	margin-right: 60px;
+}
+.facebook{
+	color: #4267b2;
+}
+.twitter{
+	color: #1da1f2;
+}
+.github{
+	color: #24292e;
+}
+.youtube{
+	color: #ff0000;
+}
+.instagram{
+	color: #ff8800;
+}
+.link a:hover{
+	background: -webkit-gradient(linear, left top, left bottom, from(#e17055), to(#0984e399));
+	background: -webkit-linear-gradient(top, #e17055, #0984e399);
+	background: -o-linear-gradient(top, #e17055, #0984e399);
+	background: linear-gradient(to bottom, #e17055, #0984e399);
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
+	color: #fff;
+}

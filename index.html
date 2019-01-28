@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Metric Conversions</title>
+    <script type="text/javascript" src="js/data.json"></script>
+	<link rel="stylesheet" type="text/css" href="font/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,800" rel="stylesheet">
+<link rel="icon" type="text/css" href="images/favicon.png">
+    <script type="text/javascript" src="js/function.js"></script>
+</head>
+<body >
+    <div id="side-menu">
+            <button onclick="menuout()"><i class="fas fa-times"></i></button>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="sisystem.html">the s.i system</a></li>
+                <li><a href="metricsystem.html">metric system</a></li>
+                <li><a href="usunits.html">traditional u.s units</a></li>
+                <li><a href="aboutus.html">about us</a></li>
+                <li><a href="faq.html">faq</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+    </div>
+	<header>
+		<nav >
+			<div class="top-side-left">
+				<div class="menu">
+					<button onclick="menuin()" ><i class="fas fa-bars"></i></button>
+				</div>
+				<div class="home-btn">
+					<a href="index.html"><i class="fas fa-home"></i></a>
+				</div>
+				<div class="search-box">
+					<div >
+						<input type="search" name="" placeholder="Search...">
+						<button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="top-side-right">
+					<a href="faq.html">FAQ</a>
+					<a href="aboutus.html">About Us</a>
+			</div>
+		</nav> 
+	</header>
+	<section>
+		<div class="container" onclick="menuout()">
+			<div class="work-are">
+				<div class="tabs">
+    				<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+    				<label for="tab-1" class="tab-label-1"><i class="fas fa-ruler-combined"></i>LENGTH</label>
+      
+    				<input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+    				<label for="tab-2" class="tab-label-2"><i class="fas fa-balance-scale"></i>WEIGHT</label>
+      
+    				<input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+    				<label for="tab-3" class="tab-label-3"><i class="fas fa-temperature-low"></i>TEMPERATURE</label>
+      
+    				<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+    				<label for="tab-4" class="tab-label-4"><i class="fas fa-globe-europe"></i>AREA</label>
+              
+              		<input id="tab-5" type="radio" name="radio-set" class="tab-selector-5" />
+    				<label for="tab-5" class="tab-label-5"><i class="fas fa-prescription-bottle"></i>VOLUME</label>
+    				<div class="clear-shadow"></div>
+    				              
+    				<div class="content">
+    				    <section class="length-content">
+    				        <div class="content-text">
+    				        	<p>from:</p>
+    				        	<p>to:</p>
+    				        </div>
+    				        <div class="input-form">
+    				        	<div class="from">
+    				        		<div class="input-from-area">
+    				        			<input id="length-input-number" type="search" name="" placeholder="0.000" onkeyup="converter_length()">
+    				        			<div class="select">
+    				        			<select id="length-from-units" onchange="converter_length()">
+    				        				<option value="inch">inch</option>
+    				        				<option value="meters">meters</option>
+    				        				<option value="feet">feet</option>
+    				        				<option value="yard">yard</option>
+    				        				<option value="kilometers">kilometers</option>
+    				        				<option value="millimeters">milimeters</option>
+    				        				<option value="miles">miles</option>
+                                            <option value="centimeters">centimeters</option>
+    				        			</select>
+    				        			</div>
+    				        		</div>
+    				        	</div>
+    				        	<div class="to">
+    				        		<button class="exchange" onclick="exchange_length()"><i class="fas fa-exchange-alt"></i></button>
+    				        		<div class="input-to-area">
+    				        			<div class="select">
+    				        			<select id="length-to-units" onchange="converter_length()" >
+    				        				<option value="millimeters">milimeters</option>
+                                            <option value="meters">meters</option>
+                                            <option value="feet">feet</option>
+                                            <option value="yard">yard</option>
+                                            <option value="kilometers">kilometers</option>
+                                            <option value="miles">miles</option>
+                                            <option value="inch">inch</option>
+                                            <option value="centimeters">centimeters</option>
+    				        			</select>
+    				        			</div>
+    				        		</div>
+    				        	</div>
+    				        </div>
+    				        <div class="res">
+    				        	<div class="res-box ">
+    				        		<input id="length-result" class="result"></input><span id="length-unit"></span>
+    				        	</div>
+                                <button class="res-btn" id="rounding" onclick="decimals_length()"><i class="fas fa-angle-double-left"></i></button>
+                                <button class="res-btn" id="clear" onclick="clear_length()"><i class="fas fa-times"></i></button>
+                                <button class="res-btn" id="copy" onclick="copy_length()"><i class="far fa-copy"></i></button>
+    				        </div>
+                            <div class="formula">
+                                <p style="font-weight: 600; font-size: 16pt;">Formula:</p><span id="length-formula"></span>
+                            </div>
+    				        <div class="descriptions">
+    				        	<div class="unit-description from-unit">
+    				        		<button id="length-from-unit" onclick="length_des_from_expand()"><span id="length-from-unit-label"></span></button>
+    				        		<div class="textarea" id="length-from-unit-des"></div>
+    				        	</div>
+    				        	<div class="unit-desciption to-unit">
+    				        		<button id="length-to-unit" onclick="length_des_to_expand()"><span id="length-to-unit-label"></span></button>
+    				        		<div class="textarea" id="length-to-unit-des"></div>
+    				        	</div>
+    				        </div>
+    				    </section>
+    				    <section class="weight-content">
+     				       <div class="content-text">
+                                <p>from:</p>
+                                <p>to:</p>
+                            </div>
+                            <div class="input-form">
+                                <div class="from">
+                                    <div class="input-from-area">
+                                        <input id="weight-input-number" type="search" name="" placeholder="0.000" onkeyup="converter_weight()">
+                                        <div class="select">
+                                        <select id="weight-from-units" onchange="converter_weight()">
+                                            <option value="ounces">ounces</option>
+                                            <option value="grams">grams</option>
+                                            <option value="pounds">pounds</option>
+                                            <option value="kilograms">kilograms</option>
+                                            <option value="shorttons">short ton</option>
+                                            <option value="tons">ton (metric ton)</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="to">
+                                    <button class="exchange" onclick="exchange_weight()"><i class="fas fa-exchange-alt"></i></button>
+                                    <div class="input-to-area">
+                                        <div class="select">
+                                        <select id="weight-to-units" onchange="converter_weight()" >
+                                            <option value="grams">grams</option>
+                                            <option value="ounces">ounces</option>
+                                            <option value="pounds">pounds</option>
+                                            <option value="kilograms">kilograms</option>
+                                            <option value="shorttons">short ton</option>
+                                            <option value="tons">ton (metric ton)</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="res">
+                                <div class="res-box ">
+                                    <input id="weight-result" class="result"></input><span id="weight-unit"></span>
+                                </div>
+                            </div>
+                            <div class="formula">
+                                <p style="font-weight: 600; font-size: 16pt;">Formula:</p><span id="weight-formula"></span>
+                            </div>
+                            <div class="descriptions">
+                                <div class="unit-description from-unit">
+                                    <button id="weight-from-unit" onclick="weight_des_from_expand()"><span id="weight-from-unit-label"></span></button>
+                                    <div class="textarea" id="weight-from-unit-des"></div>
+                                </div>
+                                <div class="unit-desciption to-unit">
+                                    <button id="weight-to-unit" onclick="weight_des_to_expand()"><span id="weight-to-unit-label"></span></button>
+                                    <div class="textarea" id="weight-to-unit-des"></div>
+                                </div>
+                            </div>
+    				    </section>
+    				    <section class="temperture-content">
+    				        <div class="content-text">
+                                <p>from:</p>
+                                <p>to:</p>
+                            </div>
+                            <div class="input-form">
+                                <div class="from">
+                                    <div class="input-from-area">
+                                        <input id="tpt-input-number" type="search" name="" placeholder="0.000" onkeyup="converter_tpt()">
+                                        <div class="select">
+                                        <select id="tpt-from-units" onchange="converter_tpt()">
+                                            <option value="Degrees Celsius">Celsius</option>
+                                            <option value="Degrees Farenheit">fahrenheit</option>
+                                            <option value="Kelvin">kelvin</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="to">
+                                    <button class="exchange" onclick="exchange_tpt()"><i class="fas fa-exchange-alt"></i></button>
+                                    <div class="input-to-area">
+                                        <div class="select">
+                                        <select id="tpt-to-units" onchange="converter_tpt()" >
+                                            <option value="Degrees Farenheit">fahrenheit</option>
+                                            <option value="Degrees Celsius">Celsius</option>                  
+                                            <option value="Kelvin">kelvin</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="res">
+                                <div class="res-box ">
+                                    <input id="tpt-result" class="result"></input><span id="tpt-unit"></span>
+                                </div>
+                            </div>
+                            <div class="formula">
+                                <p style="font-weight: 600; font-size: 16pt;">Formula:</p><span id="tpt-formula"></span>
+                            </div>
+                            <div class="descriptions">
+                                <div class="unit-description from-unit">
+                                    <button id="tpt-from-unit" onclick="tpt_des_from_expand()"><span id="tpt-from-unit-label"></span></button>
+                                    <div class="textarea" id="tpt-from-unit-des"></div>
+                                </div>
+                                <div class="unit-desciption to-unit">
+                                    <button id="tpt-to-unit" onclick="tpt_des_to_expand()"><span id="tpt-to-unit-label"></span></button>
+                                    <div class="textarea" id="tpt-to-unit-des"></div>
+                                </div>
+                            </div>
+    				    </section>
+    				    <section class="area-content">
+    				        <div class="content-text">
+                                <p>from:</p>
+                                <p>to:</p>
+                            </div>
+                            <div class="input-form">
+                                <div class="from">
+                                    <div class="input-from-area">
+                                        <input id="area-input-number" type="search" name="" placeholder="0.000" onkeyup="converter_area()">
+                                        <div class="select">
+                                        <select id="area-from-units" onchange="converter_area()">
+                                            <option value="inch">square inch</option>
+                                            <option value="m">square meters</option>
+                                            <option value="ft">square feet</option>
+                                            <option value="yard">square yard</option>
+                                            <option value="km">square kilometers</option>
+                                            <option value="mm">square milimeters</option>
+                                            <option value="mile">square miles</option>
+                                            <option value="cm">square centimeters</option>
+                                            <option value="ha">hectares</option>
+                                            <option value="acre">acres</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="to">
+                                    <button class="exchange" onclick="exchange_area()"><i class="fas fa-exchange-alt"></i></button>
+                                    <div class="input-to-area">
+                                        <div class="select">
+                                        <select id="area-to-units" onchange="converter_area()" >
+                                            <option value="ft">square feet</option>
+                                            <option value="inch">square inch</option>
+                                            <option value="m">square meters</option>
+                                            <option value="yard">square yard</option>
+                                            <option value="km">square kilometers</option>
+                                            <option value="mm">square milimeters</option>
+                                            <option value="mile">square miles</option>
+                                            <option value="cm">square centimeters</option>
+                                            <option value="ha">hectares</option>
+                                            <option value="acre">acres</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="res">
+                                <div class="res-box ">
+                                    <input id="area-result" class="result"></input><span id="area-unit"></span><sup>2</sup>
+                                </div>
+                            </div>
+                            <div class="formula">
+                                <p style="font-weight: 600; font-size: 16pt;">Formula:</p><span id="area-formula"></span>
+                            </div>
+                            <div class="descriptions">
+                                <div class="unit-description from-unit">
+                                    <button id="area-from-unit" onclick="area_des_from_expand()"><span id="area-from-unit-label"></span></button>
+                                    <div class="textarea" id="area-from-unit-des"></div>
+                                </div>
+                                <div class="unit-desciption to-unit">
+                                    <button id="area-to-unit" onclick="area_des_to_expand()"><span id="area-to-unit-label"></span></button>
+                                    <div class="textarea" id="area-to-unit-des"></div>
+                                </div>
+                            </div>
+    				    </section>
+    				    <section class="volume-content">
+    				        <div class="content-text">
+                                <p>from:</p>
+                                <p>to:</p>
+                            </div>
+                            <div class="input-form">
+                                <div class="from">
+                                    <div class="input-from-area">
+                                        <input id="vol-input-number" type="search" name="" placeholder="0.000" onkeyup="converter_volume()">
+                                        <div class="select">
+                                        <select id="vol-from-units" onchange="converter_volume()">
+                                            <option value="fluid ounces">fluid ounces</option>
+                                            <option value="milliliters">milliliters</option>
+                                            <option value="gallons">gallons</option>
+                                            <option value="liters">liters</option>
+                                            <option value="cubic meters">cubic meters</option>
+                                            <option value="cubic feet">cubic feet</option>
+                                            <option value="cubic yard">cubic yards</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="to">
+                                    <button class="exchange" onclick="exchange_volume()"><i class="fas fa-exchange-alt"></i></button>
+                                    <div class="input-to-area">
+                                        <div class="select">
+                                        <select id="vol-to-units" onchange="converter_volume()" >
+                                            <option value="milliliters">milliliters</option>
+                                            <option value="fluid ounces">fluid ounces</option>           
+                                            <option value="gallons">gallons</option>
+                                            <option value="liters">liters</option>
+                                            <option value="cubic meters">cubic meters</option>
+                                            <option value="cubic feet">cubic feet</option>
+                                            <option value="cubic yard">cubic yards</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="res">
+                                <div class="res-box ">
+                                    <input id="vol-result" class="result"></input><span id="vol-unit"></span>
+                                </div>
+                            </div>
+                            <div class="formula">
+                                <p style="font-weight: 600; font-size: 16pt;">Formula:</p><span id="vol-formula"></span>
+                            </div>
+                            <div class="descriptions">
+                                <div class="unit-description from-unit">
+                                    <button id="vol-from-unit" onclick="vol_des_from_expand()"><span id="vol-from-unit-label"></span></button>
+                                    <div class="textarea" id="vol-from-unit-des"></div>
+                                </div>
+                                <div class="unit-desciption to-unit">
+                                    <button id="vol-to-unit" onclick="vol_des_to_expand()"><span id="vol-to-unit-label"></span></button>
+                                    <div class="textarea" id="vol-to-unit-des"></div>
+                                </div>
+                            </div>
+    				    </section>
+    				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+       <div class="footer"> 
+		<div class="bottom-list">
+            <div class="logo">
+                <img src="images/logo.png">
+                <p>Copyright by F5 Team - FPT University, FPT Aptech HaNoi</p>
+            </div>
+            <div class="ft-mn-ls">
+                <p>Menu</p>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="sisystem.html">the s.i system</a></li>
+                    <li><a href="metricsystem.html">metric system</a></li>
+                    <li><a href="usunits.html">traditional u.s units</a></li>
+                    <li><a href="aboutus.html">about us</a></li>
+                    <li><a href="faq.html">faq</a></li>
+                </ul>
+            </div>
+            <div class="fl-ct-ctn">
+                <p>Contact Us</p>
+                <ul>
+                    <li>Email: f5_team@gmail.com</li>
+                    <li>
+                        <ul class="bottom-link">
+                            <li><a href="#" ><i class="fab fa-facebook-square""></i></a></li>
+                            <li><a href="#" ><i class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-github-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-youtube-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>      
+        </div>
+	</footer>
+</body>
+</html>
