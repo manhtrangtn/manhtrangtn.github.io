@@ -377,7 +377,7 @@ z-index:100 !important;
 	border: none;
 	outline: none;
 	font-size: 12pt;
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -407,7 +407,7 @@ z-index:100 !important;
 	border: none;
 	outline: none;
 	font-size: 12pt;
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -447,6 +447,12 @@ z-index:100 !important;
 	font-size: 18pt;
 	border-radius: 40px;
 	line-height: 40px;
+	overflow: hidden;
+}
+.res-btn i{
+	font-size: 20pt;
+	margin-top: 10px;
+	transition: 0.2s;
 }
 #rounding-length:hover,#rounding-weight:hover,#rounding-tpt:hover,#rounding-area:hover,#rounding-vol:hover{
 	color: #fff;
@@ -483,6 +489,13 @@ z-index:100 !important;
 	animation: 2s ease infinite;
 	-webkit-animation-name: gradient;
 	        animation-name: gradient;
+
+}
+#clear-length:hover i,#clear-weight:hover i,#clear-tpt:hover i,#clear-area:hover i,#clear-vol:hover i{
+	transform: rotate(360deg);
+}
+#copy-length:hover i,#copy-weight:hover i,#copy-tpt:hover i,#copy-area:hover i,#copy-vol:hover i{
+	transform: translateY(-43px);
 }
 .content .res{
 	width: 100%;

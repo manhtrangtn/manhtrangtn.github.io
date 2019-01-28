@@ -1463,6 +1463,7 @@ function copy_length() {
   var copyText = document.getElementById("length-result");
   copyText.select();
   document.execCommand("copy");
+  document.getElementById('length-unit').innerText = 'Copied!';
 }
 function decimals_weight(){
 	var res = '';
@@ -1486,6 +1487,7 @@ function copy_weight() {
   var copyText = document.getElementById("weight-result");
   copyText.select();
   document.execCommand("copy");
+  document.getElementById('weight-unit').innerText = 'Copied!';
 }
 function decimals_tpt(){
 	var res = '';
@@ -1509,6 +1511,7 @@ function copy_tpt() {
   var copyText = document.getElementById("tpt-result");
   copyText.select();
   document.execCommand("copy");
+  document.getElementById('tpt-unit').innerText = 'Copied!';
 }
 function decimals_area(){
 	var res = '';
@@ -1532,6 +1535,7 @@ function copy_area() {
   var copyText = document.getElementById("area-result");
   copyText.select();
   document.execCommand("copy");
+  document.getElementById('area-unit').innerText = 'Copied!';
 }
 function decimals_vol(){
 	var res = '';
@@ -1555,6 +1559,7 @@ function copy_vol() {
   var copyText = document.getElementById("vol-result");
   copyText.select();
   document.execCommand("copy");
+  document.getElementById('vol-unit').innerText = 'Copied!';
 }
 //abcxyz
 
