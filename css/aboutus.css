@@ -25,12 +25,11 @@
 }
 .grname{
 	font-size: 32pt;
-	font-weight: 600;
 	text-align: center;
 	margin: 50px 0 50px 0;
 }
 .grname p{
-	font-weight: 900;
+	font-weight: 200;
 	letter-spacing: 2px;
 }
 .content{
@@ -59,16 +58,6 @@
 	-webkit-animation: 6s ease infinite;
 	animation: 6s ease infinite;
 }
-@-webkit-keyframes gradient {
-    0%{background-position:83% 0%}
-    50%{background-position:18% 100%}
-    100%{background-position:83% 0%}
-}
-@keyframes gradient { 
-    0%{background-position:83% 0%}
-    50%{background-position:18% 100%}
-    100%{background-position:83% 0%}
-}	
 .content-col-title{
 	display: block;
 	font-size: 36pt;
@@ -125,6 +114,7 @@
 	-o-transition: 0.6s;
 	transition: 0.6s;
 	margin-right: 60px;
+
 }
 .facebook{
 	color: #4267b2;
@@ -142,12 +132,26 @@
 	color: #ff8800;
 }
 .link a:hover{
-	background: -webkit-gradient(linear, left top, left bottom, from(#e17055), to(#0984e399));
-	background: -webkit-linear-gradient(top, #e17055, #0984e399);
-	background: -o-linear-gradient(top, #e17055, #0984e399);
-	background: linear-gradient(to bottom, #e17055, #0984e399);
 	-webkit-transform: scale(1.2);
 	    -ms-transform: scale(1.2);
 	        transform: scale(1.2);
 	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0984e399), to(#e17055));
+	background: -webkit-linear-gradient(top, #0984e399, #e17055);
+	background: -o-linear-gradient(top, #0984e399, #e17055);
+	background: linear-gradient(120deg, #0984e399, #e17055);
+	background-size: 100% 200%;
+	-webkit-animation: 6s ease infinite;
+	animation: 6s ease infinite;
+	animation-name: gradient;
 }
+@-webkit-keyframes gradient {
+    0%{background-position:83% 0%}
+    50%{background-position:18% 100%}
+    100%{background-position:83% 0%}
+}
+@keyframes gradient { 
+    0%{background-position:83% 0%}
+    50%{background-position:18% 100%}
+    100%{background-position:83% 0%}
+}	
