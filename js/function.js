@@ -1,3 +1,4 @@
+window.onscroll = function() {scroll_top()};
 // animation
 		function menuin() {
 			var menu = document.getElementById('side-menu');
@@ -32,15 +33,15 @@
 			des_min.style.height = "0";
 		}
 		function weight_des_from_expand(){
-			var des = document.getElementById("weight-from-unit-des");
+			var des = document.getElementById("mass-from-unit-des");
 			des.style.height = "150px";
-			var des_min = document.getElementById("weight-to-unit-des");
+			var des_min = document.getElementById("mass-to-unit-des");
 			des_min.style.height = "0";
 		}
 		function weight_des_to_expand(){
-			var des = document.getElementById("weight-to-unit-des");
+			var des = document.getElementById("mass-to-unit-des");
 			des.style.height = "150px";
-			var des_min = document.getElementById("weight-from-unit-des");
+			var des_min = document.getElementById("mass-from-unit-des");
 			des_min.style.height = "0";
 		}
 		function tpt_des_from_expand(){
@@ -66,6 +67,17 @@
 			des.style.height = "150px";
 			var des_min = document.getElementById("vol-from-unit-des");
 			des_min.style.height = "0";
+		}
+		function scroll_top() {
+			if (document.body.scrollTop > 200||document.documentElement.scrollTop > 200) {
+				document.getElementById("scroll-up-btn").style.visibility = "visible";
+			} else {
+				document.getElementById("scroll-up-btn").style.visibility = "hidden";
+			}
+		}
+		function scroll_top_active() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
 		}
 // convert
 function converter_length(){
@@ -889,12 +901,12 @@ function converter_area(){
 		document.getElementById('area-to-unit-des').innerHTML = x;}
 }
 function converter_weight() {
-		var from = document.getElementById('weight-from-units').value;
-		var to = document.getElementById('weight-to-units').value;
-		var input = document.getElementById('weight-input-number').value;
-		var output = document.getElementById('weight-result');
-		var formula = document.getElementById('weight-formula');
-		var res_unit = document.getElementById('weight-unit');
+		var from = document.getElementById('mass-from-units').value;
+		var to = document.getElementById('mass-to-units').value;
+		var input = document.getElementById('mass-input-number').value;
+		var output = document.getElementById('mass-result');
+		var formula = document.getElementById('mass-formula');
+		var res_unit = document.getElementById('mass-unit');
 		var res;
 		var x;
 		if (from == 'ounces') {
@@ -925,10 +937,10 @@ function converter_weight() {
 		}
 		output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.ounces;
-				document.getElementById('weight-to-unit-des').innerHTML = x;
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.ounces;
+				document.getElementById('mass-to-unit-des').innerHTML = x;
 				}	
 		if (from == 'grams') {
 			if (to == 'grams') {
@@ -957,10 +969,10 @@ function converter_weight() {
 				x=des.tons;	
 		}output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.grams;
-				document.getElementById('weight-to-unit-des').innerHTML = x;}	
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.grams;
+				document.getElementById('mass-to-unit-des').innerHTML = x;}	
 		if (from == 'pounds') {
 			if (to == 'pounds') {
 				res = input*1; //pounds to pounds
@@ -988,10 +1000,10 @@ function converter_weight() {
 				x=des.tons;	
 		}output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.pounds;
-				document.getElementById('weight-to-unit-des').innerHTML = x;}
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.pounds;
+				document.getElementById('mass-to-unit-des').innerHTML = x;}
 		if (from == 'kilograms') {
 			if (to == 'kilograms') {
 				res = input*1; //kilograms to kilograms
@@ -1019,10 +1031,10 @@ function converter_weight() {
 				x=des.tons;	
 		}output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.kilograms;
-				document.getElementById('weight-to-unit-des').innerHTML = x;}
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.kilograms;
+				document.getElementById('mass-to-unit-des').innerHTML = x;}
 		if (from == 'shorttons') {
 			if (to == 'shorttons') {
 				res = input*1; //shorttons to shorttons
@@ -1050,10 +1062,10 @@ function converter_weight() {
 				x=des.tons;	
 		}output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.shorttons;
-				document.getElementById('weight-to-unit-des').innerHTML = x;}
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.shorttons;
+				document.getElementById('mass-to-unit-des').innerHTML = x;}
 		if (from == 'tons') {
 			if (to == 'tons') {
 				res = input*1; //tons to tons
@@ -1081,10 +1093,10 @@ function converter_weight() {
 				x=des.shorttons;	
 		}output.value=res; //inch
 				res_unit.innerText=to;
-				document.getElementById('weight-from-unit-label').innerText = from;
-				document.getElementById('weight-to-unit-label').innerText = to;
-				document.getElementById('weight-from-unit-des').innerHTML = des.tons;
-				document.getElementById('weight-to-unit-des').innerHTML = x;}
+				document.getElementById('mass-from-unit-label').innerText = from;
+				document.getElementById('mass-to-unit-label').innerText = to;
+				document.getElementById('mass-from-unit-des').innerHTML = des.tons;
+				document.getElementById('mass-to-unit-des').innerHTML = x;}
 }
 function converter_tpt() {
 	var to = document.getElementById('tpt-to-units').value;
@@ -1415,9 +1427,9 @@ function exchange_length() {
 }
 function exchange_weight() {
 	var tmp = '';
-	tmp = document.getElementById('weight-from-units').value;
-	document.getElementById('weight-from-units').value = document.getElementById('weight-to-units').value;
-	document.getElementById('weight-to-units').value = tmp;
+	tmp = document.getElementById('mass-from-units').value;
+	document.getElementById('mass-from-units').value = document.getElementById('mass-to-units').value;
+	document.getElementById('mass-to-units').value = tmp;
 	converter_weight();
 }
 function exchange_tpt() {
@@ -1467,27 +1479,27 @@ function copy_length() {
 }
 function decimals_weight(){
 	var res = '';
-	res=document.getElementById('weight-result').value;
+	res=document.getElementById('mass-result').value;
 	var a = parseInt(res);
 	var s = String(a).length;
 	var x = res.length;
 	var z = (x-s)-2;
 	if (res[z+s] != '.') {
 		y=parseFloat(res).toFixed(z);
-		document.getElementById('weight-result').value=y;
+		document.getElementById('mass-result').value=y;
 	}
 }
 
 function clear_weight() {
-	document.getElementById("weight-input-number").value = '';
-	document.getElementById("weight-result").value = '';
+	document.getElementById("mass-input-number").value = '';
+	document.getElementById("mass-result").value = '';
 }
 
 function copy_weight() {
-  var copyText = document.getElementById("weight-result");
+  var copyText = document.getElementById("mass-result");
   copyText.select();
   document.execCommand("copy");
-  document.getElementById('weight-unit').innerText = 'Copied!';
+  document.getElementById('mass-unit').innerText = 'Copied!';
 }
 function decimals_tpt(){
 	var res = '';
@@ -1501,12 +1513,10 @@ function decimals_tpt(){
 		document.getElementById('tpt-result').value=y;
 	}
 }
-
 function clear_tpt() {
 	document.getElementById("tpt-input-number").value = '';
 	document.getElementById("tpt-result").value = '';
 }
-
 function copy_tpt() {
   var copyText = document.getElementById("tpt-result");
   copyText.select();
@@ -1525,12 +1535,10 @@ function decimals_area(){
 		document.getElementById('area-result').value=y;
 	}
 }
-
 function clear_area() {
 	document.getElementById("area-input-number").value = '';
 	document.getElementById("area-result").value = '';
 }
-
 function copy_area() {
   var copyText = document.getElementById("area-result");
   copyText.select();
@@ -1549,12 +1557,10 @@ function decimals_vol(){
 		document.getElementById('vol-result').value=y;
 	}
 }
-
 function clear_vol() {
 	document.getElementById("vol-input-number").value = '';
 	document.getElementById("vol-result").value = '';
 }
-
 function copy_vol() {
   var copyText = document.getElementById("vol-result");
   copyText.select();
